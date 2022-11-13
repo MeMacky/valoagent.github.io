@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+
+html,body{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header{
+    padding: 10px;
+}
+header{
+    position: sticky;
+    width: 100%;
+}
+nav{
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+.front{
+    align-items: center;
+    display: flex;
+}
+.front > a img{
+    width: 80px;
+    height: 50px;
+}
+
+.front h1 a{
+    text-decoration: none;
+    color: white;
+}
+nav > ul{
+    list-style-type: none;
+    display: flex;
+    gap: 200px;
+    margin: 0;
+    padding: 0;
+    margin-right: 100px;
+    text-align: right;
+    
+}
+
+nav ul li{
+    letter-spacing: 10px;
+    font-size: 23px;
+    opacity: 0.5;
+    text-align: center;
+    width: 174px;
+    height: 40px;
+    
+}
+
+nav ul li:nth-child(2){
+    opacity: 1;
+    border: none;
+    border-bottom: 5px solid rgb(255, 0, 0);
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+.wrappercontent{
+    height: 94vh !important;
+}
+.valocover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(15px); /* apply the blur */
+    pointer-events: none; /* make the overlay click-through */
+}
+.valocover{
+    background: url("valorant.png") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    backdrop-filter: blur(15px);
+
+   
+}
+.wrappercontent{
+    padding: 6vw;
+    padding-top: 30px;
+    padding-bottom: 0;
+    height: 80vh !important;
+    
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 80vh;
+    
+}
+
+.content_name{
+    line-height:10px;
+    color: white;
+    height: 300px;
+}
+.content_name > h1{
+    font-size: 100px;
+    letter-spacing: 10px;
+    font-family: 'Lato', sans-serif;
+    text-shadow: 3px 1px 2px rgb(0, 0, 0);
+}
+.content_name > h2{
+    font-size: 20px;
+}
+.content_name > h1, .content_name > h2{
+    line-height: 2px;
+}
+
+.content_bio{
+    line-height: 20px;
+    margin-top: 50px;
+}
+
+.content_bio > p{
+    font-size: 20px;
+    text-shadow: 3px 1px 2px rgb(0, 0, 0);
+}
+.content_name, .content_image{
+    flex: 1;
+}
+
+.content_image{
+    display: flex;
+    height: 80vh;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+.image{
+    overflow: hidden;
+    height: 84vh;
+}
+.image > img{
+    width: 42rem;
+    height: 170vh;
+    margin-left: -90px;
+    filter: drop-shadow(-5px -3px 0px #000);
+    image-rendering: crisp-edges;
+    animation-name: chamber;
+    animation-duration: 5s;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+@keyframes chamber {
+  from{opacity: 0;}
+  to{opacity: 1;} 
+}
+.content_image, .content_ability{
+    flex: 1;
+}
+
+
+.content_ability{
+    overflow: hidden;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 80px;
+    margin-left: -100px;
+    
+}
+
+.content_ability ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+    margin-right: 10px !important;
+    
+}
+
+.content_ability > ul li{
+        background-color: rgb(26, 25, 25);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background-position: center;
+        border: 2px solid black;
+        
+}
+
+.content_ability > ul li:nth-child(1){
+    background-image: url("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt734ce749d24f1b4f/618d9ebad380f814d61f0020/Chamber_ability_Q.png");
+    background-size: cover;
+}
+
+.content_ability > ul li:nth-child(2){
+    background-image: url("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt273c7e9db39da271/618d9ec29dccbf6fa4178520/Chamber_ability_E.png");
+    background-size: cover;
+}
+
+.content_ability > ul li:nth-child(3){
+    background-image: url("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt4c14aadba51a0037/618d9ed03b08dd14d79a8087/Chamber_ability_C.png");
+    background-size: cover;
+}
+
+.content_ability > ul li:nth-child(4){
+    background-image: url("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt6856745815feee67/618d9eda3b08dd14d79a808b/Chamber_ability_X.png");
+    background-size: cover;
+}
+
+.tooltiptext, .tooltiptext2, .tooltiptext3, .tooltiptext4{
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 3;
+    top: 185px;
+    right: 145px;
+    transition: visibility 0.3s linear,opacity 0.3s linear;
+    opacity:0;
+}
+
+.tooltiptext::after, .tooltiptext2::after, .tooltiptext3::after, .tooltiptext4::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 120px;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgb(255, 255, 255);
+}
+.first:hover, .second:hover, .third:hover, .ult:hover{
+    cursor: pointer;
+}
+.first:hover .tooltiptext {
+    visibility: visible;
+    opacity:1;
+}
+
+.tooltiptext2{
+    top: 255px;
+}
+.second:hover .tooltiptext2 {
+    visibility: visible;
+    opacity:1;
+}
+
+.tooltiptext3{
+    top: 325px;
+}
+
+.third:hover .tooltiptext3{
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltiptext4{
+    top: 395px;
+}
+.ult:hover .tooltiptext4 {
+    visibility: visible;
+    opacity: 1;
+}
+.content_skills{
+    display: flex;
+    position: relative;
+    height: 300px;
+    top: -250px;
+    height: 20px;
+}
+
+video{
+    width: 100% !important;
+    height: auto;
+    box-shadow: 1px 1px 9px 5px rgba(0, 0, 0, 0.92);
+-webkit-box-shadow: 1px 1px 9px 5px rgba(0, 0, 0, 0.92);
+-moz-box-shadow: 1px 1px 9px 5px rgba(0, 0, 0, 0.92);
+border-radius: 30px;
+}
+.skills_ultimate,.skills_dance{
+    width: 350px !important;
+   height: 20px;
+    
+}
+.skills_ultimate{
+    position: absolute;
+}
+
+.skills_dance{
+    margin-left: 150px;
+    margin-top: -25px;
+}
+
+.me{
+    font-size: 8px;
+    position: absolute;
+    color: gray;
+    height: 10px;
+    bottom: 20px;
+}
+
+.me a{
+    color: rgb(17, 0, 255);
+}
+
+@media screen and (max-width: 1301px) {
+    .valocover, .valocover::after{
+        height: 143vh;
+    }
+
+    .me{
+        bottom: -36vh;
+    }
+
+    .content_skills{
+        left: 5vw;
+        top: -30vh;
+    }
+    
+    .content_image{
+        margin-left: 10vw;  
+        width: 20vw !important;
+        overflow: hidden;
+        flex-basis: 800px;
+        display: flex;
+    }
+
+    .image > img{
+        margin-right: -10vw;
+        
+    }
+    
+    .content_ability{
+        width: 30px !important;
+        height: 50vh;
+        align-items: flex-start;
+        margin-left: 10vw;
+    }
+    
+
+}
+@media screen and (max-width: 1025px) {
+    nav > ul{
+        gap: 10vw;
+    }
+
+  
+}
+
+@media screen and (max-width: 769px) {
+    .image > img{
+        margin-left: -13vw;
+    }
+
+    .image{
+
+        margin-right: -15vw;
+    }
+
+    .valocover, .valocover::after{
+        height: 143vh;
+    }
+
+    nav > ul{
+        gap: 2vw;
+    }
+}
+
+@media screen and (max-width:427px) {
+    .content_name > h1{
+        font-size: 50px;
+    }
+    .image > img{
+        
+        margin-left: -50vw;
+    }
+
+    .image{
+        height: 88vh;
+        margin-right: -15vw;
+        margin-bottom: -500vh;
+    }
+    .valocover, .valocover::after{
+        height: 167vh;
+    }
+
+    nav > ul li:nth-child(1){
+        display: none;
+    }
+
+    nav > ul{
+        margin-left: 10px;
+    }
+
+    .skills_ultimate,.skills_dance{
+        width: 300px !important;
+       height: 20px;
+        
+    }
+
+    .skills_dance{
+        margin-left: 0;
+        margin-top: 13vh;
+    }
+    .content_ability{
+        margin-left: -80vw;
+    }
+    .me{
+        bottom: -63vh;
+    }
+}
+
+
+
+
+
